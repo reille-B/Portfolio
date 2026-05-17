@@ -3,603 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Samantha KIWA — Software Developer · Big Data & Data Engineering</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Poppins:wght@300;400;500;600&family=Lexend:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --espresso: #2C1810;
-    --espresso-deep: #1C0F0A;
-    --nuit: #1C1208;
-    --or: #C9A84C;
-    --or-pale: #E8D9B5;
-    --or-fonce: #A8882E;
-    --creme: #FBF8F3;
-    --creme-fonce: #F0EBE0;
-    --taupe: #8C8070;
-    --sable: #D9D0C0;
-    --sable-clair: #BDB5A6;
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    font-family: 'Lexend', sans-serif;
-    background: var(--creme);
-    color: var(--espresso);
-    overflow-x: hidden;
-  }
-
-  /* ── NAV ── */
-  nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 100;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 60px;
-    background: rgba(28, 18, 8, 0.95);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(201, 168, 76, 0.2);
-  }
-
-  .nav-logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--or);
-    letter-spacing: 0.5px;
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 40px;
-    list-style: none;
-  }
-
-  .nav-links a {
-    font-family: 'Poppins', sans-serif;
-    font-size: 12px;
-    font-weight: 500;
-    color: var(--creme);
-    text-decoration: none;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    opacity: 0.8;
-    transition: opacity 0.3s, color 0.3s;
-  }
-
-  .nav-links a:hover { opacity: 1; color: var(--or); }
-
-  /* ── HERO ── */
-  .hero {
-    min-height: 100vh;
-    background: var(--nuit);
-    display: flex;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    padding: 120px 60px 80px;
-  }
-
-  .hero::before {
-    content: '';
-    position: absolute;
-    top: -200px; right: -200px;
-    width: 600px; height: 600px;
-    background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%);
-    pointer-events: none;
-  }
-
-  .hero::after {
-    content: '';
-    position: absolute;
-    bottom: -100px; left: -100px;
-    width: 400px; height: 400px;
-    background: radial-gradient(circle, rgba(201,168,76,0.05) 0%, transparent 70%);
-    pointer-events: none;
-  }
-
-  .hero-content {
-    max-width: 900px;
-    animation: fadeUp 1s ease both;
-  }
-
-  .hero-eyebrow {
-    font-family: 'Poppins', sans-serif;
-    font-size: 11px;
-    font-weight: 500;
-    color: var(--or);
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    margin-bottom: 24px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .hero-eyebrow::before {
-    content: '';
-    width: 32px;
-    height: 1px;
-    background: var(--or);
-  }
-
-  .hero-name {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(52px, 8vw, 96px);
-    font-weight: 700;
-    color: var(--creme);
-    line-height: 1.0;
-    margin-bottom: 8px;
-    letter-spacing: -1px;
-  }
-
-  .hero-name span { color: var(--or); }
-
-  .hero-title {
-    font-family: 'Poppins', sans-serif;
-    font-size: clamp(14px, 2vw, 18px);
-    font-weight: 300;
-    color: var(--taupe);
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 40px;
-  }
-
-  .hero-tagline {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(20px, 3vw, 32px);
-    font-weight: 400;
-    color: var(--creme);
-    font-style: italic;
-    line-height: 1.4;
-    margin-bottom: 8px;
-    opacity: 0.9;
-  }
-
-  .hero-sub {
-    font-family: 'Poppins', sans-serif;
-    font-size: 13px;
-    font-weight: 300;
-    color: var(--or-pale);
-    letter-spacing: 1px;
-    margin-bottom: 56px;
-    opacity: 0.7;
-  }
-
-  .hero-cta {
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-  }
-
-  .btn-primary {
-    font-family: 'Poppins', sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: var(--nuit);
-    background: var(--or);
-    padding: 14px 32px;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.2s;
-  }
-
-  .btn-primary:hover { background: var(--or-fonce); transform: translateY(-2px); }
-
-  .btn-ghost {
-    font-family: 'Poppins', sans-serif;
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: var(--creme);
-    background: transparent;
-    padding: 14px 32px;
-    text-decoration: none;
-    border: 1px solid rgba(251,248,243,0.3);
-    transition: border-color 0.3s, transform 0.2s;
-  }
-
-  .btn-ghost:hover { border-color: var(--or); color: var(--or); transform: translateY(-2px); }
-
-  .hero-bar {
-    position: absolute;
-    left: 0; top: 0; bottom: 0;
-    width: 4px;
-    background: linear-gradient(to bottom, transparent, var(--or), transparent);
-    opacity: 0.6;
-  }
-
-  /* ── SECTIONS ── */
-  section { padding: 100px 60px; }
-
-  .section-label {
-    font-family: 'Poppins', sans-serif;
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    color: var(--or);
-    margin-bottom: 16px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .section-label::before {
-    content: '';
-    width: 24px;
-    height: 1px;
-    background: var(--or);
-  }
-
-  .section-title {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(32px, 5vw, 52px);
-    font-weight: 700;
-    color: var(--espresso);
-    line-height: 1.1;
-    margin-bottom: 48px;
-  }
-
-  /* ── ABOUT ── */
-  #about { background: var(--creme); }
-
-  .about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: start;
-    max-width: 1100px;
-  }
-
-  .about-text p {
-    font-family: 'Lexend', sans-serif;
-    font-size: 16px;
-    font-weight: 300;
-    color: var(--espresso);
-    line-height: 1.8;
-    margin-bottom: 20px;
-    opacity: 0.9;
-  }
-
-  .about-text p strong {
-    color: var(--or-fonce);
-    font-weight: 500;
-  }
-
-  .about-stats {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-  }
-
-  .stat-card {
-    background: var(--creme-fonce);
-    border-left: 3px solid var(--or);
-    padding: 24px 28px;
-  }
-
-  .stat-number {
-    font-family: 'Playfair Display', serif;
-    font-size: 42px;
-    font-weight: 700;
-    color: var(--or);
-    line-height: 1;
-    margin-bottom: 4px;
-  }
-
-  .stat-label {
-    font-family: 'Poppins', sans-serif;
-    font-size: 11px;
-    font-weight: 500;
-    color: var(--taupe);
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
-
-  .stat-desc {
-    font-family: 'Lexend', sans-serif;
-    font-size: 13px;
-    color: var(--espresso);
-    margin-top: 6px;
-    opacity: 0.8;
-  }
-
-  /* ── PITCH ── */
-  #pitch {
-    background: var(--espresso-deep);
-    position: relative;
-    overflow: hidden;
-  }
-
-  #pitch::before {
-    content: '';
-    position: absolute;
-    top: 50%; right: -100px;
-    transform: translateY(-50%);
-    width: 500px; height: 500px;
-    background: radial-gradient(circle, rgba(201,168,76,0.06) 0%, transparent 70%);
-    pointer-events: none;
-  }
-
-  #pitch .section-label { color: var(--or); }
-  #pitch .section-label::before { background: var(--or); }
-
-  #pitch .section-title { color: var(--creme); }
-
-  .pitch-content {
-    max-width: 760px;
-    position: relative;
-    z-index: 1;
-  }
-
-  .pitch-quote {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(18px, 2.5vw, 26px);
-    font-weight: 400;
-    color: var(--creme);
-    line-height: 1.7;
-    font-style: italic;
-    margin-bottom: 32px;
-    padding-left: 28px;
-    border-left: 3px solid var(--or);
-    opacity: 0.9;
-  }
-
-  .pitch-body p {
-    font-family: 'Lexend', sans-serif;
-    font-size: 16px;
-    font-weight: 300;
-    color: var(--sable-clair);
-    line-height: 1.8;
-    margin-bottom: 18px;
-  }
-
-  .pitch-body p strong { color: var(--or-pale); font-weight: 500; }
-
-  .pitch-video-placeholder {
-    margin-top: 48px;
-    background: rgba(201,168,76,0.06);
-    border: 1px solid rgba(201,168,76,0.2);
-    padding: 48px;
-    text-align: center;
-  }
-
-  .pitch-video-placeholder p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 12px;
-    font-weight: 500;
-    color: var(--taupe);
-    letter-spacing: 2px;
-    text-transform: uppercase;
-  }
-
-  .pitch-video-placeholder .play-icon {
-    width: 64px;
-    height: 64px;
-    border: 2px solid rgba(201,168,76,0.4);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 20px;
-  }
-
-  .pitch-video-placeholder .play-icon::after {
-    content: '▶';
-    color: var(--or);
-    font-size: 20px;
-    margin-left: 4px;
-  }
-
-  /* ── PORTFOLIO ── */
-  #portfolio { background: var(--creme-fonce); }
-
-  .portfolio-coming {
-    max-width: 700px;
-  }
-
-  .portfolio-coming p {
-    font-family: 'Lexend', sans-serif;
-    font-size: 16px;
-    font-weight: 300;
-    color: var(--taupe);
-    line-height: 1.8;
-    margin-bottom: 16px;
-  }
-
-  .portfolio-coming .signature {
-    font-family: 'Playfair Display', serif;
-    font-size: 28px;
-    color: var(--or);
-    font-style: italic;
-    margin-top: 32px;
-  }
-
-  .portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2px;
-    margin-top: 48px;
-  }
-
-  .portfolio-placeholder {
-    background: var(--creme);
-    border: 1px solid var(--sable);
-    padding: 40px 32px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .portfolio-placeholder::before {
-    content: '✦';
-    position: absolute;
-    top: 20px; right: 20px;
-    color: var(--sable);
-    font-size: 14px;
-  }
-
-  .portfolio-placeholder .pp-tag {
-    font-family: 'Poppins', sans-serif;
-    font-size: 9px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--sable-clair);
-    margin-bottom: 12px;
-  }
-
-  .portfolio-placeholder .pp-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 18px;
-    color: var(--sable);
-    font-style: italic;
-  }
-
-  /* ── CONTACT ── */
-  #contact { background: var(--nuit); }
-
-  #contact .section-label { color: var(--or); }
-  #contact .section-label::before { background: var(--or); }
-  #contact .section-title { color: var(--creme); }
-
-  .contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    max-width: 900px;
-  }
-
-  .contact-intro {
-    font-family: 'Lexend', sans-serif;
-    font-size: 16px;
-    font-weight: 300;
-    color: var(--sable-clair);
-    line-height: 1.8;
-    margin-bottom: 32px;
-  }
-
-  .contact-links {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  .contact-link {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    text-decoration: none;
-    padding: 16px 20px;
-    border: 1px solid rgba(201,168,76,0.15);
-    transition: border-color 0.3s, background 0.3s;
-  }
-
-  .contact-link:hover {
-    border-color: var(--or);
-    background: rgba(201,168,76,0.05);
-  }
-
-  .contact-link-icon {
-    font-size: 16px;
-    color: var(--or);
-    min-width: 20px;
-  }
-
-  .contact-link-text {
-    font-family: 'Poppins', sans-serif;
-    font-size: 12px;
-    color: var(--creme);
-    font-weight: 400;
-    opacity: 0.8;
-  }
-
-  .contact-right {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .motto {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(24px, 4vw, 48px);
-    font-weight: 700;
-    color: var(--or);
-    line-height: 1.1;
-    margin-bottom: 16px;
-    font-style: italic;
-  }
-
-  .motto-sub {
-    font-family: 'Poppins', sans-serif;
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--taupe);
-  }
-
-  /* ── FOOTER ── */
-  footer {
-    background: var(--nuit);
-    border-top: 1px solid rgba(201,168,76,0.15);
-    padding: 32px 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .footer-name {
-    font-family: 'Playfair Display', serif;
-    font-size: 14px;
-    color: var(--or);
-    font-weight: 500;
-  }
-
-  .footer-copy {
-    font-family: 'Poppins', sans-serif;
-    font-size: 11px;
-    color: var(--taupe);
-    letter-spacing: 0.5px;
-  }
-
-  /* ── ANIMATIONS ── */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  .fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
-  }
-
-  .fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* ── RESPONSIVE ── */
-  @media (max-width: 768px) {
-    nav { padding: 16px 24px; }
-    .nav-links { display: none; }
-    section { padding: 60px 24px; }
-    .hero { padding: 100px 24px 60px; }
-    .about-grid { grid-template-columns: 1fr; gap: 40px; }
-    .contact-grid { grid-template-columns: 1fr; gap: 40px; }
-    .portfolio-grid { grid-template-columns: 1fr; }
-    footer { flex-direction: column; gap: 12px; text-align: center; padding: 24px; }
-  }
-</style>
+<title>Samantha KIWA Software Developer · Big Data & Data Engineering</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Lexend:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -608,7 +14,6 @@
   <div class="nav-logo">SK</div>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
-    <li><a href="#pitch">Pitch</a></li>
     <li><a href="#portfolio">Portfolio</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -632,16 +37,24 @@
 
 <!-- ABOUT -->
 <section id="about">
-  <div class="section-label">About me</div>
-  <h2 class="section-title">Building systems<br>that matter.</h2>
-  <div class="about-grid fade-in">
-    <div class="about-text">
-      <p>I'm a <strong>Software Developer</strong> with a strong data sensibility, based in Brazzaville, Republic of Congo. With 2 years of experience building high-stakes information systems, I've worked across fintech and national public health.</p>
-      <p>At <strong>NexCom</strong>, I developed the full-stack CMMS and business dashboards end-to-end. At the <strong>Ministry of Health</strong>, I contributed to national health information systems serving communities across the country.</p>
-      <p>What makes me different is that I <strong>think in data before I think in code</strong>. I don't just build features, I build systems that are clean, structured, and built to last.</p>
-      <p>I'm currently completing my <strong>Data Engineering training at ALX Africa</strong> and actively transitioning toward my first Data Engineer role.</p>
+  <div class="section-wrap">
+    <div class="section-label">About me</div>
+    <h2 class="section-title">Building systems<br>that matter.</h2>
+    <div class="about-top fade-in">
+      <div class="about-left">
+        <div class="about-text">
+          <p>I'm a <strong>Software Developer</strong> with a strong data sensibility, based in the  Republic of Congo. With 2 years of experience building high-stakes information systems, I've worked across fintech and national public health.</p>
+          <p>At <strong>NexCom</strong>, I developed full-stack CMMS and business dashboards end-to-end. At the <strong>Ministry of Health</strong>, I contributed to national health information systems deployed at national scale across Congo, systems where reliable data directly affects decisions that impact real lives.</p>
+          <p>That is what drives me. I don't just build features, I think in data before I think in code, because I've seen firsthand what broken data flows cost organizations and the people who depend on them.</p>
+          <p>I chose <strong>Data Engineering</strong> because it is the foundation of everything that follows, analysis, intelligence, impact. I am particularly interested in how strong data infrastructure can unlock better systems in Africa, especially in healthcare, women empowerment and development.</p>
+          <p>I am currently completing my <strong>Data Engineering training at ALX Africa</strong>, building intentionally toward that trajectory, one system at a time.</p>
+        </div>
+      </div>
+      <div class="about-photo">
+        <img src="img/moi.png" alt="Samantha KIWA">
+      </div>
     </div>
-    <div class="about-stats">
+    <div class="about-stats fade-in">
       <div class="stat-card">
         <div class="stat-number">2</div>
         <div class="stat-label">Years of experience</div>
@@ -653,7 +66,7 @@
         <div class="stat-desc">Deployed at national scale</div>
       </div>
       <div class="stat-card">
-        <div class="stat-number">∞</div>
+        <div class="stat-number">✦</div>
         <div class="stat-label">Unshakeable</div>
         <div class="stat-desc">I do hard things.</div>
       </div>
@@ -661,87 +74,76 @@
   </div>
 </section>
 
-<!-- ELEVATOR PITCH -->
-<section id="pitch">
-  <div class="section-label">Elevator pitch</div>
-  <h2 class="section-title">My story,<br>in 60 seconds.</h2>
-  <div class="pitch-content fade-in">
-    <p class="pitch-quote">Hi, I'm Samantha KIWA a Software Developer specializing in Big Data and Data Engineering, based in Brazzaville, Republic of Congo.</p>
-    <div class="pitch-body">
-      <p>I've spent the past 2 years building information systems that matter from <strong>national public health systems deployed across Congo</strong>, to <strong>fintech dashboards</strong> that drive real-time business decisions.</p>      
-      <p>What makes me different? I think in data before I think in code. I don't just build features, I build systems that make data flow cleanly, <strong>from source to decision</strong>.</p>
-      <p>I'm currently completing my Data Engineering training at ALX Africa and actively looking for my first Data Engineer role.</p>
-      <p>If you're building something that needs clean data infrastructure <strong>let's talk.</strong></p>
-    </div>
-    <div class="pitch-video-placeholder">
-      <div class="play-icon"></div>
-      <p>Video pitch - coming soon</p>
-    </div>
-  </div>
-</section>
 
 <!-- PORTFOLIO -->
 <section id="portfolio">
-  <div class="section-label">Portfolio</div>
-  <h2 class="section-title">Work that<br>speaks for itself.</h2>
-  <div class="portfolio-coming fade-in">
-    <p>My portfolio is being built intentionally one project at a time. Each project here will represent real work, real data, and real impact.</p>
-    <p>No filler. No shortcuts. Only what I can fully stand behind.</p>
-    <div class="signature">Coming soon. ✦</div>
-  </div>
-  <div class="portfolio-grid">
-    <div class="portfolio-placeholder">
-      <div class="pp-tag">Data Engineering</div>
-      <div class="pp-title">Project 01</div>
-    </div>
-    <div class="portfolio-placeholder">
-      <div class="pp-tag">Full Stack</div>
-      <div class="pp-title">Project 02</div>
-    </div>
-    <div class="portfolio-placeholder">
-      <div class="pp-tag">Data Analysis</div>
-      <div class="pp-title">Project 03</div>
+  <div class="section-wrap">
+    <div class="section-label">Portfolio</div>
+    <h2 class="section-title">Work that<br>speaks for itself.</h2>
+    <div class="portfolio-grid">
+      <a href="https://github.com/reille-B/analyse_scolarisation" target="_blank" class="portfolio-card">
+        <div class="pc-tag">Data Analysis</div>
+        <h3 class="pc-title">Girls' School Enrollment<br>in Central Africa</h3>
+        <p class="pc-desc">Analysis of girls' enrollment patterns across Central Africa. Data sourced from UNESCO, World Bank, and INS Congo.</p>
+        <div class="pc-stack">
+          <span>Python</span>
+          <span>Jupyter</span>
+          <span>UNESCO data</span>
+        </div>
+        <div class="pc-link">View on GitHub →</div>
+      </a>
+      <div class="portfolio-placeholder">
+        <div class="pp-tag">Full Stack</div>
+        <div class="pp-title">Project 02</div>
+      </div>
+      <div class="portfolio-placeholder">
+        <div class="pp-tag">Data Analysis</div>
+        <div class="pp-title">Project 03</div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-  <div class="section-label">Contact</div>
-  <h2 class="section-title">Let's build<br>something real.</h2>
-  <div class="contact-grid fade-in">
-    <div>
-      <p class="contact-intro">I'm open to Data Engineering roles, collaborations, and conversations about building data infrastructure.</p>
-      <div class="contact-links">
-        <a href="mailto:samantha.bokatola.kiwa@gmail.com" class="contact-link">
-          <span class="contact-link-icon">✉</span>
-          <span class="contact-link-text">samantha.bokatola.kiwa@gmail.com</span>
-        </a>
-        <a href="https://linkedin.com/in/samantha-kiwa-9aa417297" target="_blank" class="contact-link">
-          <span class="contact-link-icon">in</span>
-          <span class="contact-link-text">linkedin.com/in/samantha-kiwa-9aa417297</span>
-        </a>
-        <a href="https://github.com/reille-B" target="_blank" class="contact-link">
-          <span class="contact-link-icon">◈</span>
-          <span class="contact-link-text">github.com/reille-B</span>
-        </a>
+  <div class="section-wrap">
+    <div class="section-label">Contact</div>
+    <h2 class="section-title">Let's build<br>something real.</h2>
+    <div class="contact-grid fade-in">
+      <div>
+        <p class="contact-intro">I'm open to Data Engineering roles, collaborations, and conversations about building data infrastructure.</p>
+        <div class="contact-links">
+          <a href="mailto:samantha.bokatola.kiwa@gmail.com" class="contact-link">
+            <span class="contact-link-icon">✉</span>
+            <span class="contact-link-text">samantha.bokatola.kiwa@gmail.com</span>
+          </a>
+          <a href="https://linkedin.com/in/samantha-kiwa-9aa417297" target="_blank" class="contact-link">
+            <span class="contact-link-icon">in</span>
+            <span class="contact-link-text">linkedin.com/in/samantha-kiwa-9aa417297</span>
+          </a>
+          <a href="https://github.com/reille-B" target="_blank" class="contact-link">
+            <span class="contact-link-icon">◈</span>
+            <span class="contact-link-text">github.com/reille-B</span>
+          </a>
+        </div>
       </div>
-    </div>
-    <div class="contact-right">
-      <div class="motto">From source<br>to impact.</div>
-      <div class="motto-sub">Unshakeable · 2026</div>
+      <div class="contact-right">
+        <div class="motto">From source<br>to impact.</div>
+        <div class="motto-sub">Unshakeable · 2026</div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-name">BOKATOLA KIWA Mireille Samantha</div>
-  <div class="footer-copy">Raw data to real decisions. · Brazzaville, Congo · 2026</div>
+  <div class="footer-inner">
+    <div class="footer-name">BOKATOLA KIWA Mireille Samantha</div>
+    <div class="footer-copy">Raw data to real decisions. · Brazzaville, Congo · 2026</div>
+  </div>
 </footer>
 
 <script>
-  // Scroll animations
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
