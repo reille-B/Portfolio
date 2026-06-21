@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KYC Manager · Case Study · Samantha KIWA</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Lexend:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">SK</a>
+  <ul class="nav-links">
+    <li><a href="index.html#about" data-i18n="nav-about">About</a></li>
+    <li><a href="index.html#portfolio" data-i18n="nav-portfolio">Portfolio</a></li>
+    <li><a href="index.html#contact" data-i18n="nav-contact">Contact</a></li>
+  </ul>
+  <button class="lang-switch" aria-label="Change language" type="button">
+    <span data-lang="en">EN</span>
+    <span class="lang-sep">·</span>
+    <span data-lang="fr">FR</span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="case-hero">
+  <div class="hero-bar"></div>
+  <div class="section-wrap">
+    <div class="case-back">
+      <a href="index.html#portfolio" data-i18n="case-back">← Back to portfolio</a>
+    </div>
+    <div class="case-hero-eyebrow" data-i18n="case-eyebrow">Case Study · Full Stack · Fintech</div>
+    <h1 class="case-hero-title">KYC Manager</h1>
+    <p class="case-hero-sub" data-i18n="case-hero-sub">An offline-first PWA digitizing KYC onboarding for mPOS agents in Brazzaville.</p>
+    <div class="case-meta">
+      <div class="meta-item">
+        <div class="meta-label" data-i18n="meta-role-label">Role</div>
+        <div class="meta-value" data-i18n="meta-role">Full Stack Developer</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label" data-i18n="meta-context-label">Context</div>
+        <div class="meta-value" data-i18n="meta-context">Tindela · mPOS distribution network</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label" data-i18n="meta-stack-label">Stack</div>
+        <div class="meta-value">Nuxt 4 · Supabase · PWA · Leaflet</div>
+      </div>
+    </div>
+    <div class="case-cta">
+      <a href="https://kyc-youbusiness.vercel.app/" target="_blank" class="btn-primary" data-i18n="case-cta-demo">Try the live demo</a>
+      <a href="mailto:samantha.bokatola.kiwa@gmail.com?subject=KYC%20Manager%20%E2%80%94%20demo%20access" class="btn-ghost-dark" data-i18n="case-cta-access">Request demo access</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTEXT -->
+<section class="case-section">
+  <div class="section-wrap">
+    <div class="section-label" data-i18n="context-label">The context</div>
+    <h2 class="section-title" data-i18n="context-title">From paper<br>to a real system.</h2>
+    <div class="case-body">
+      <p data-i18n="context-p1">Tindela is a fintech operating across four zones in Brazzaville (Centre, Littorale, Nord, Sud). Each zone is run by its own independent distributor, responsible for onboarding the mPOS agents (the merchants who accept the mobile payment terminals) in their zone.</p>
+      <p data-i18n="context-p2">Until now, onboarding meant a paper form. Slow to fill out, hard to read, easy to lose, painful to consolidate, and almost impossible to audit. For a regulated financial product, that's a real liability.</p>
+      <p data-i18n="context-p3">The platform replaces paper with a structured digital file: entered once, controlled, validated, and automatically rendered into the official KYC PDF and the consolidated Excel base. With full traceability of who did what, when.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTION -->
+<section class="case-section case-section-dark">
+  <div class="section-wrap">
+    <div class="section-label" data-i18n="solution-label">The solution</div>
+    <h2 class="section-title" data-i18n="solution-title">A file moves<br>through three states.</h2>
+
+    <div class="lifecycle">
+      <div class="lc-step">
+        <div class="lc-num">01</div>
+        <div class="lc-name" data-i18n="lc-draft">Draft</div>
+        <div class="lc-desc" data-i18n="lc-draft-desc">The evaluator (or team lead) captures the file in the field, even fully offline. Resumable later. Private to its author.</div>
+      </div>
+      <div class="lc-arrow">→</div>
+      <div class="lc-step">
+        <div class="lc-num">02</div>
+        <div class="lc-name" data-i18n="lc-pending">Pending</div>
+        <div class="lc-desc" data-i18n="lc-pending-desc">Submitted for validation. A gate blocks submission while required fields are missing. Duplicate detection (same ID / mPOS # / IMEI) triggers a side-by-side comparison.</div>
+      </div>
+      <div class="lc-arrow">→</div>
+      <div class="lc-step lc-step-final">
+        <div class="lc-num">03</div>
+        <div class="lc-name" data-i18n="lc-validated">Validated</div>
+        <div class="lc-desc" data-i18n="lc-validated-desc">The validator controls, completes (wave, supervisor, mPOS user #), signs, and the file is locked. Or sent back with a reason. It returns to Draft.</div>
+      </div>
+    </div>
+
+    <div class="case-feature-grid">
+      <div class="case-feature">
+        <div class="cf-icon">⏻</div>
+        <h3 class="cf-title" data-i18n="feature-offline">Offline-first</h3>
+        <p class="cf-desc" data-i18n="feature-offline-desc">Everything works without a network: capture, edits, photos, signatures. Local Dexie store, sync queue, optimistic concurrency. A stuck file is flagged, never silently lost.</p>
+      </div>
+      <div class="case-feature">
+        <div class="cf-icon">◈</div>
+        <h3 class="cf-title" data-i18n="feature-team">Team collaboration</h3>
+        <p class="cf-desc" data-i18n="feature-team-desc">A file can be shared with a teammate (the creator stays accountable). Team leads can edit any non-validated file in their team. Conflict guards prevent overwrites.</p>
+      </div>
+      <div class="case-feature">
+        <div class="cf-icon">⊕</div>
+        <h3 class="cf-title" data-i18n="feature-geo">Geolocation</h3>
+        <p class="cf-desc" data-i18n="feature-geo-desc">One-tap GPS capture, adjustable on a map (street / satellite, free tiles). Each supervisor sees their agents on a territorial map, scoped to their perimeter.</p>
+      </div>
+      <div class="case-feature">
+        <div class="cf-icon">⎙</div>
+        <h3 class="cf-title" data-i18n="feature-docs">Official documents</h3>
+        <p class="cf-desc" data-i18n="feature-docs-desc">A faithful recreation of the official KYC PDF (identity, engagement, letter, stamps, signatures) via pdf-lib. Consolidated Excel base (numbering, waves) via write-excel-file.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROLES & SECURITY -->
+<section class="case-section">
+  <div class="section-wrap">
+    <div class="section-label" data-i18n="roles-label">Roles & security</div>
+    <h2 class="section-title" data-i18n="roles-title">Six roles, strict<br>separation of duties.</h2>
+
+    <div class="role-grid">
+      <div class="role">
+        <div class="role-name" data-i18n="role-eval">Evaluator</div>
+        <div class="role-desc" data-i18n="role-eval-desc">Field agent. Onboards merchants, captures everything.</div>
+      </div>
+      <div class="role">
+        <div class="role-name" data-i18n="role-lead">Team lead</div>
+        <div class="role-desc" data-i18n="role-lead-desc">Manages a team of evaluators. Onboards too, helps complete files.</div>
+      </div>
+      <div class="role">
+        <div class="role-name" data-i18n="role-valid">Validator</div>
+        <div class="role-desc" data-i18n="role-valid-desc">Controls and validates files in a zone. Produces the final dossier.</div>
+      </div>
+      <div class="role">
+        <div class="role-name" data-i18n="role-zone">Zone manager</div>
+        <div class="role-desc" data-i18n="role-zone-desc">Supervises a zone (read + can send back), without validating it.</div>
+      </div>
+      <div class="role">
+        <div class="role-name" data-i18n="role-admin">Administrator</div>
+        <div class="role-desc" data-i18n="role-admin-desc">Manages accounts and configuration. No access to KYC files.</div>
+      </div>
+      <div class="role role-root">
+        <div class="role-name" data-i18n="role-commander">Commander</div>
+        <div class="role-desc" data-i18n="role-commander-desc">Root of trust. Full rights, designates admins. Break-glass account.</div>
+      </div>
+    </div>
+
+    <div class="security-points">
+      <div class="sec-point">
+        <div class="sec-num">①</div>
+        <div class="sec-body">
+          <div class="sec-title" data-i18n="sec-rls-title">RLS at the database level</div>
+          <div class="sec-desc" data-i18n="sec-rls-desc">Postgres Row Level Security is the real barrier: the DB only returns rows the caller is allowed to see. The UI hides what you can't do; the server refuses what you shouldn't.</div>
+        </div>
+      </div>
+      <div class="sec-point">
+        <div class="sec-num">②</div>
+        <div class="sec-body">
+          <div class="sec-title" data-i18n="sec-sep-title">Separation of duties</div>
+          <div class="sec-desc" data-i18n="sec-sep-desc">The person who captures is not the person who validates. The zone manager supervises without validating. Anti-escalation: an admin cannot self-promote to Commander.</div>
+        </div>
+      </div>
+      <div class="sec-point">
+        <div class="sec-num">③</div>
+        <div class="sec-body">
+          <div class="sec-title" data-i18n="sec-iso-title">Per-account isolation, even offline</div>
+          <div class="sec-desc" data-i18n="sec-iso-desc">KYC media are stored separately with their own ACLs. Local IndexedDB stores are isolated per account on the device. Sensitive actions are journaled in an audit log.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STACK -->
+<section class="case-section case-section-dark">
+  <div class="section-wrap">
+    <div class="section-label" data-i18n="stack-label">Technical choices</div>
+    <h2 class="section-title" data-i18n="stack-title">Picked to make<br>offline a first-class citizen.</h2>
+
+    <div class="stack-grid">
+      <div class="stack-cat">
+        <div class="sc-name" data-i18n="sc-frontend">Frontend</div>
+        <div class="sc-items">Nuxt 4 (Vue 3.5, SPA) · Nuxt UI 4 · Tailwind CSS v4 · Pinia · VueUse · Zod · TypeScript strict</div>
+      </div>
+      <div class="stack-cat">
+        <div class="sc-name" data-i18n="sc-backend">Backend & data</div>
+        <div class="sc-items">Supabase (Postgres · Auth · Storage · RLS) · Nitro server routes · service_role for privileged actions</div>
+      </div>
+      <div class="stack-cat">
+        <div class="sc-name" data-i18n="sc-offline">Offline-first core</div>
+        <div class="sc-items">Dexie (IndexedDB) · custom outbox + push/pull sync · optimistic concurrency · @vite-pwa/nuxt (Workbox)</div>
+      </div>
+      <div class="stack-cat">
+        <div class="sc-name" data-i18n="sc-maps">Maps</div>
+        <div class="sc-items">Leaflet · OpenStreetMap (street) · Esri World Imagery (satellite). Free, no API key.</div>
+      </div>
+      <div class="stack-cat">
+        <div class="sc-name" data-i18n="sc-docs">Document generation</div>
+        <div class="sc-items">pdf-lib (server-side official KYC PDF) · write-excel-file (consolidated Excel base, serverless-safe)</div>
+      </div>
+      <div class="stack-cat">
+        <div class="sc-name" data-i18n="sc-quality">Quality & ops</div>
+        <div class="sc-items">Vitest (74 unit tests on Zod schemas, RBAC, helpers) · pnpm · Vercel (auto-deploy on master)</div>
+      </div>
+    </div>
+
+    <div class="case-callout">
+      <div class="callout-label" data-i18n="callout-label">Why this stack</div>
+      <p class="callout-text" data-i18n="callout-text">The data layer is deliberately isolated. The Pinia stores never talk to Supabase directly; they go through a repository pattern. That means we can swap Supabase for a custom REST backend in v2 without touching the pages or stores. Local-first is the foundation; cloud is just one transport.</p>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="case-section">
+  <div class="section-wrap">
+    <div class="section-label" data-i18n="gallery-label">Glimpses</div>
+    <h2 class="section-title" data-i18n="gallery-title">A few screens<br>from the product.</h2>
+
+    <div class="gallery-grid">
+      <figure class="gallery-item gallery-featured">
+        <img src="img/kyc-map.png" alt="Map of mPOS agents across Brazzaville" loading="lazy">
+        <figcaption>
+          <div class="gc-tag" data-i18n="gallery-5-tag">Territorial coverage</div>
+          <div class="gc-desc" data-i18n="gallery-5-desc">116 mPOS agents geolocated across Brazzaville. Each supervisor sees only the agents in their perimeter, scoped at the database level.</div>
+        </figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="img/kyc-login.png" alt="KYC Manager login screen" loading="lazy">
+        <figcaption>
+          <div class="gc-tag" data-i18n="gallery-1-tag">Authentication</div>
+          <div class="gc-desc" data-i18n="gallery-1-desc">The entry point, with per-zone branding (here: Tindela). Test accounts use Yopmail-style emails.</div>
+        </figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="img/kyc-form.png" alt="New KYC file: Identity step" loading="lazy">
+        <figcaption>
+          <div class="gc-tag" data-i18n="gallery-2-tag">Capture · Step 1 of 6</div>
+          <div class="gc-desc" data-i18n="gallery-2-desc">A six-step KYC file: identity, address, employer, PEP, engagement/mPOS, media. Resumable, validated by Zod schemas.</div>
+        </figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="img/kyc-dashboard.png" alt="Commander dashboard with KPIs" loading="lazy">
+        <figcaption>
+          <div class="gc-tag" data-i18n="gallery-6-tag">Dashboard</div>
+          <div class="gc-desc" data-i18n="gallery-6-desc">121 files, 81% validation rate, breakdown by zone and top evaluators. Same component, different scope per role, enforced by RLS.</div>
+        </figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="img/kyc-zones.png" alt="Per-zone configuration" loading="lazy">
+        <figcaption>
+          <div class="gc-tag" data-i18n="gallery-3-tag">Multi-zone</div>
+          <div class="gc-desc" data-i18n="gallery-3-desc">Each zone (Centre, Littorale, Nord, Sud) carries its own raison sociale, stamp, and waves. One platform, many distributors.</div>
+        </figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="img/kyc-permissions.png" alt="Permissions matrix by role" loading="lazy">
+        <figcaption>
+          <div class="gc-tag" data-i18n="gallery-4-tag">RBAC</div>
+          <div class="gc-desc" data-i18n="gallery-4-desc">Permissions × roles matrix. Sensitive actions require confirmation. The Commander has every right and isn't listed (root of trust).</div>
+        </figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="img/kyc-audit.png" alt="Audit log of sensitive actions" loading="lazy">
+        <figcaption>
+          <div class="gc-tag" data-i18n="gallery-7-tag">Audit log</div>
+          <div class="gc-desc" data-i18n="gallery-7-desc">Every sensitive action is journaled: account changes, zone edits, submissions, validations, send-backs, deletions. Scoped per perimeter.</div>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- BOTTOM CTA -->
+<section class="case-section case-section-dark case-section-closing">
+  <div class="section-wrap case-bottom case-bottom-dark">
+    <h2 class="section-title" data-i18n="cta-title">See it in action.</h2>
+    <p class="case-bottom-text" data-i18n="cta-text">The demo runs the full role hierarchy with seed data. Request access; I'll send credentials scoped to a test account.</p>
+    <div class="case-cta">
+      <a href="https://kyc-youbusiness.vercel.app/" target="_blank" class="btn-primary" data-i18n="case-cta-demo">Try the live demo</a>
+      <a href="mailto:samantha.bokatola.kiwa@gmail.com?subject=KYC%20Manager%20%E2%80%94%20demo%20access" class="btn-ghost" data-i18n="case-cta-access">Request demo access</a>
+    </div>
+    <div class="case-back-bottom">
+      <a href="index.html#portfolio" data-i18n="case-back">← Back to portfolio</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-name">BOKATOLA KIWA Mireille Samantha</div>
+    <div class="footer-copy" data-i18n="footer-copy">Raw data to real decisions. · Brazzaville, Congo · 2026</div>
+  </div>
+</footer>
+
+<script>
+  const translations = {
+    en: {
+      __title: "KYC Manager · Case Study · Samantha KIWA",
+      "nav-about": "About",
+      "nav-portfolio": "Portfolio",
+      "nav-contact": "Contact",
+      "case-back": "← Back to portfolio",
+      "case-eyebrow": "Case Study · Full Stack · Fintech",
+      "case-hero-sub": "An offline-first PWA digitizing KYC onboarding for mPOS agents in Brazzaville.",
+      "meta-role-label": "Role",
+      "meta-role": "Full Stack Developer",
+      "meta-context-label": "Context",
+      "meta-context": "Tindela · mPOS distribution network",
+      "meta-stack-label": "Stack",
+      "case-cta-demo": "Try the live demo",
+      "case-cta-access": "Request demo access",
+      "context-label": "The context",
+      "context-title": "From paper<br>to a real system.",
+      "context-p1": "Tindela is a fintech operating across four zones in Brazzaville (Centre, Littorale, Nord, Sud). Each zone is run by its own independent distributor, responsible for onboarding the mPOS agents (the merchants who accept the mobile payment terminals) in their zone.",
+      "context-p2": "Until now, onboarding meant a paper form. Slow to fill out, hard to read, easy to lose, painful to consolidate, and almost impossible to audit. For a regulated financial product, that's a real liability.",
+      "context-p3": "The platform replaces paper with a structured digital file: entered once, controlled, validated, and automatically rendered into the official KYC PDF and the consolidated Excel base. With full traceability of who did what, when.",
+      "solution-label": "The solution",
+      "solution-title": "A file moves<br>through three states.",
+      "lc-draft": "Draft",
+      "lc-draft-desc": "The evaluator (or team lead) captures the file in the field, even fully offline. Resumable later. Private to its author.",
+      "lc-pending": "Pending",
+      "lc-pending-desc": "Submitted for validation. A gate blocks submission while required fields are missing. Duplicate detection (same ID / mPOS # / IMEI) triggers a side-by-side comparison.",
+      "lc-validated": "Validated",
+      "lc-validated-desc": "The validator controls, completes (wave, supervisor, mPOS user #), signs, and the file is locked. Or sent back with a reason. It returns to Draft.",
+      "feature-offline": "Offline-first",
+      "feature-offline-desc": "Everything works without a network: capture, edits, photos, signatures. Local Dexie store, sync queue, optimistic concurrency. A stuck file is flagged, never silently lost.",
+      "feature-team": "Team collaboration",
+      "feature-team-desc": "A file can be shared with a teammate (the creator stays accountable). Team leads can edit any non-validated file in their team. Conflict guards prevent overwrites.",
+      "feature-geo": "Geolocation",
+      "feature-geo-desc": "One-tap GPS capture, adjustable on a map (street / satellite, free tiles). Each supervisor sees their agents on a territorial map, scoped to their perimeter.",
+      "feature-docs": "Official documents",
+      "feature-docs-desc": "A faithful recreation of the official KYC PDF (identity, engagement, letter, stamps, signatures) via pdf-lib. Consolidated Excel base (numbering, waves) via write-excel-file.",
+      "roles-label": "Roles & security",
+      "roles-title": "Six roles, strict<br>separation of duties.",
+      "role-eval": "Evaluator",
+      "role-eval-desc": "Field agent. Onboards merchants, captures everything.",
+      "role-lead": "Team lead",
+      "role-lead-desc": "Manages a team of evaluators. Onboards too, helps complete files.",
+      "role-valid": "Validator",
+      "role-valid-desc": "Controls and validates files in a zone. Produces the final dossier.",
+      "role-zone": "Zone manager",
+      "role-zone-desc": "Supervises a zone (read + can send back), without validating it.",
+      "role-admin": "Administrator",
+      "role-admin-desc": "Manages accounts and configuration. No access to KYC files.",
+      "role-commander": "Commander",
+      "role-commander-desc": "Root of trust. Full rights, designates admins. Break-glass account.",
+      "sec-rls-title": "RLS at the database level",
+      "sec-rls-desc": "Postgres Row Level Security is the real barrier: the DB only returns rows the caller is allowed to see. The UI hides what you can't do; the server refuses what you shouldn't.",
+      "sec-sep-title": "Separation of duties",
+      "sec-sep-desc": "The person who captures is not the person who validates. The zone manager supervises without validating. Anti-escalation: an admin cannot self-promote to Commander.",
+      "sec-iso-title": "Per-account isolation, even offline",
+      "sec-iso-desc": "KYC media are stored separately with their own ACLs. Local IndexedDB stores are isolated per account on the device. Sensitive actions are journaled in an audit log.",
+      "stack-label": "Technical choices",
+      "stack-title": "Picked to make<br>offline a first-class citizen.",
+      "sc-frontend": "Frontend",
+      "sc-backend": "Backend & data",
+      "sc-offline": "Offline-first core",
+      "sc-maps": "Maps",
+      "sc-docs": "Document generation",
+      "sc-quality": "Quality & ops",
+      "callout-label": "Why this stack",
+      "callout-text": "The data layer is deliberately isolated. The Pinia stores never talk to Supabase directly; they go through a repository pattern. That means we can swap Supabase for a custom REST backend in v2 without touching the pages or stores. Local-first is the foundation; cloud is just one transport.",
+      "gallery-label": "Glimpses",
+      "gallery-title": "A few screens<br>from the product.",
+      "gallery-1-tag": "Authentication",
+      "gallery-1-desc": "The entry point, with per-zone branding (here: Tindela). Test accounts use Yopmail-style emails.",
+      "gallery-2-tag": "Capture · Step 1 of 6",
+      "gallery-2-desc": "A six-step KYC file: identity, address, employer, PEP, engagement/mPOS, media. Resumable, validated by Zod schemas.",
+      "gallery-3-tag": "Multi-zone",
+      "gallery-3-desc": "Each zone (Centre, Littorale, Nord, Sud) carries its own raison sociale, stamp, and waves. One platform, many distributors.",
+      "gallery-4-tag": "RBAC",
+      "gallery-4-desc": "Permissions × roles matrix. Sensitive actions require confirmation. The Commander has every right and isn't listed (root of trust).",
+      "gallery-5-tag": "Territorial coverage",
+      "gallery-5-desc": "116 mPOS agents geolocated across Brazzaville. Each supervisor sees only the agents in their perimeter, scoped at the database level.",
+      "gallery-6-tag": "Dashboard",
+      "gallery-6-desc": "121 files, 81% validation rate, breakdown by zone and top evaluators. Same component, different scope per role, enforced by RLS.",
+      "gallery-7-tag": "Audit log",
+      "gallery-7-desc": "Every sensitive action is journaled: account changes, zone edits, submissions, validations, send-backs, deletions. Scoped per perimeter.",
+      "cta-title": "See it in action.",
+      "cta-text": "The demo runs the full role hierarchy with seed data. Request access; I'll send credentials scoped to a test account.",
+      "footer-copy": "Raw data to real decisions. · Brazzaville, Congo · 2026"
+    },
+    fr: {
+      __title: "KYC Manager · Étude de cas · Samantha KIWA",
+      "nav-about": "À propos",
+      "nav-portfolio": "Portfolio",
+      "nav-contact": "Contact",
+      "case-back": "← Retour au portfolio",
+      "case-eyebrow": "Étude de cas · Full Stack · Fintech",
+      "case-hero-sub": "Une PWA offline-first qui numérise l'onboarding KYC des agents mPOS à Brazzaville.",
+      "meta-role-label": "Rôle",
+      "meta-role": "Développeuse Full Stack",
+      "meta-context-label": "Contexte",
+      "meta-context": "Tindela · réseau de distribution mPOS",
+      "meta-stack-label": "Stack",
+      "case-cta-demo": "Tester la démo",
+      "case-cta-access": "Demander un accès",
+      "context-label": "Le contexte",
+      "context-title": "Du papier<br>à un vrai système.",
+      "context-p1": "Tindela est une fintech qui opère sur quatre zones de Brazzaville (Centre, Littorale, Nord, Sud). Chaque zone est exploitée par son propre distributeur indépendant, responsable de l'enrôlement des agents mPOS (les revendeurs qui acceptent les terminaux de paiement mobile) sur son périmètre.",
+      "context-p2": "Jusqu'ici, l'enrôlement passait par un formulaire papier. Lent à remplir, difficile à lire, facile à perdre, pénible à consolider et quasi impossible à auditer. Pour un produit financier régulé, c'est un vrai risque.",
+      "context-p3": "La plateforme remplace ce papier par un dossier numérique structuré, saisi une fois, contrôlé, validé, puis automatiquement rendu en formulaire KYC officiel (PDF) et en base Excel consolidée. Avec une traçabilité complète : qui a fait quoi, quand.",
+      "solution-label": "La solution",
+      "solution-title": "Un dossier qui passe<br>par trois états.",
+      "lc-draft": "Brouillon",
+      "lc-draft-desc": "L'évaluateur (ou le chef d'équipe) saisit sur le terrain, y compris totalement hors-ligne. Reprenable plus tard. Privé à son auteur.",
+      "lc-pending": "En attente",
+      "lc-pending-desc": "Soumis pour validation. Un contrôle bloque la soumission tant que des champs obligatoires manquent. La détection de doublons (même CNI / N° mPOS / IMEI) déclenche une comparaison côte à côte.",
+      "lc-validated": "Validée",
+      "lc-validated-desc": "Le validateur contrôle, complète (vague, superviseur, n° user mPOS), signe, et la fiche est verrouillée. Ou renvoyée en correction avec un motif. Elle repasse en brouillon.",
+      "feature-offline": "Offline-first",
+      "feature-offline-desc": "Tout fonctionne sans réseau : saisie, édition, photos, signatures. Stockage Dexie local, file de synchro, concurrence optimiste. Une fiche bloquée est signalée, jamais perdue silencieusement.",
+      "feature-team": "Collaboration d'équipe",
+      "feature-team-desc": "Une fiche peut être partagée à un coéquipier (le créateur reste responsable). Le chef d'équipe peut éditer les fiches non validées de son équipe. Des gardes anti-conflit évitent les écrasements.",
+      "feature-geo": "Géolocalisation",
+      "feature-geo-desc": "Capture GPS en un tap, ajustable sur une carte (rue / satellite, tuiles gratuites). Chaque superviseur voit ses agents sur une carte territoriale, scopée à son périmètre.",
+      "feature-docs": "Documents officiels",
+      "feature-docs-desc": "Une recréation fidèle du formulaire KYC officiel (identité, engagement, lettre, tampons, signatures) via pdf-lib. Base Excel consolidée (numérotation, vagues) via write-excel-file.",
+      "roles-label": "Rôles & sécurité",
+      "roles-title": "Six rôles, séparation<br>stricte des tâches.",
+      "role-eval": "Évaluateur",
+      "role-eval-desc": "Agent de terrain. Onboarde les revendeurs, saisit tout.",
+      "role-lead": "Chef d'équipe",
+      "role-lead-desc": "Encadre une équipe d'évaluateurs. Onboarde aussi, aide à compléter.",
+      "role-valid": "Validateur",
+      "role-valid-desc": "Contrôle et valide les fiches d'une zone. Produit le dossier final.",
+      "role-zone": "Chef de zone",
+      "role-zone-desc": "Supervise une zone (lecture + peut renvoyer), sans la valider.",
+      "role-admin": "Administrateur",
+      "role-admin-desc": "Gère les comptes et la configuration. Pas d'accès aux fiches KYC.",
+      "role-commander": "Commander",
+      "role-commander-desc": "Racine de confiance. Tous les droits, désigne les admins. Compte break-glass.",
+      "sec-rls-title": "RLS au niveau base de données",
+      "sec-rls-desc": "La Row Level Security Postgres est la vraie barrière : la base ne renvoie que les lignes autorisées. L'interface masque ce qu'on ne peut pas faire ; le serveur refuse ce qu'on ne doit pas.",
+      "sec-sep-title": "Séparation des tâches",
+      "sec-sep-desc": "Celui qui saisit n'est pas celui qui valide. Le chef de zone supervise sans valider. Anti-escalade : un admin ne peut pas s'auto-promouvoir Commander.",
+      "sec-iso-title": "Isolation par compte, même hors-ligne",
+      "sec-iso-desc": "Les médias KYC sont stockés à part avec leurs propres ACL. Les bases IndexedDB locales sont isolées par compte sur l'appareil. Les actions sensibles sont tracées dans un journal d'audit.",
+      "stack-label": "Choix techniques",
+      "stack-title": "Choisi pour que l'offline<br>soit un citoyen de première classe.",
+      "sc-frontend": "Frontend",
+      "sc-backend": "Backend & données",
+      "sc-offline": "Cœur offline-first",
+      "sc-maps": "Cartographie",
+      "sc-docs": "Génération de documents",
+      "sc-quality": "Qualité & ops",
+      "callout-label": "Pourquoi ce stack",
+      "callout-text": "La couche de données est délibérément isolée. Les stores Pinia ne parlent jamais directement à Supabase ; ils passent par un pattern repository. Cela veut dire qu'on peut remplacer Supabase par un backend REST custom en v2 sans toucher aux pages ni aux stores. Le local-first est le socle ; le cloud n'est qu'un transport.",
+      "gallery-label": "Aperçus",
+      "gallery-title": "Quelques écrans<br>du produit.",
+      "gallery-1-tag": "Authentification",
+      "gallery-1-desc": "Le point d'entrée, avec branding par zone (ici : Tindela). Les comptes de test utilisent des emails Yopmail.",
+      "gallery-2-tag": "Saisie · Étape 1 sur 6",
+      "gallery-2-desc": "Une fiche KYC en six étapes : identité, adresse, employeur, PPE, engagement/mPOS, médias. Reprenable, validée par schémas Zod.",
+      "gallery-3-tag": "Multi-zone",
+      "gallery-3-desc": "Chaque zone (Centre, Littorale, Nord, Sud) porte sa propre raison sociale, son tampon et ses vagues. Une plateforme, plusieurs distributeurs.",
+      "gallery-4-tag": "RBAC",
+      "gallery-4-desc": "Matrice permissions × rôles. Les actions sensibles demandent une confirmation. Le Commander a tous les droits et n'est pas listé (racine de confiance).",
+      "gallery-5-tag": "Couverture territoriale",
+      "gallery-5-desc": "116 agents mPOS géolocalisés sur Brazzaville. Chaque superviseur ne voit que les agents de son périmètre, cloisonnement au niveau base de données.",
+      "gallery-6-tag": "Tableau de bord",
+      "gallery-6-desc": "121 fiches, 81% de validation, répartition par zone et top évaluateurs. Même composant, périmètre différent selon le rôle, garanti par la RLS.",
+      "gallery-7-tag": "Journal d'audit",
+      "gallery-7-desc": "Chaque action sensible est tracée : changements de compte, édition de zone, soumissions, validations, renvois, suppressions. Scopé par périmètre.",
+      "cta-title": "Voir en conditions réelles.",
+      "cta-text": "La démo fait tourner toute la hiérarchie de rôles avec des données de test. Demande un accès ; j'envoie des identifiants scopés à un compte de test.",
+      "footer-copy": "De la donnée brute aux décisions réelles. · Brazzaville, Congo · 2026"
+    }
+  };
+
+  function detectInitialLang() {
+    const saved = localStorage.getItem('lang');
+    if (saved === 'en' || saved === 'fr') return saved;
+    return (navigator.language || '').toLowerCase().startsWith('fr') ? 'fr' : 'en';
+  }
+
+  function applyLang(lang) {
+    const dict = translations[lang];
+    document.documentElement.lang = lang;
+    document.title = dict.__title;
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.dataset.i18n;
+      if (dict[key] != null) el.innerHTML = dict[key];
+    });
+    document.querySelectorAll('.lang-switch [data-lang]').forEach(el => {
+      el.classList.toggle('active', el.dataset.lang === lang);
+    });
+    localStorage.setItem('lang', lang);
+  }
+
+  applyLang(detectInitialLang());
+
+  document.querySelector('.lang-switch').addEventListener('click', () => {
+    const current = document.documentElement.lang;
+    applyLang(current === 'fr' ? 'en' : 'fr');
+  });
+</script>
+</body>
+</html>

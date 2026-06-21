@@ -13,24 +13,29 @@
 <nav>
   <div class="nav-logo">SK</div>
   <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#portfolio">Portfolio</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#about" data-i18n="nav-about">About</a></li>
+    <li><a href="#portfolio" data-i18n="nav-portfolio">Portfolio</a></li>
+    <li><a href="#contact" data-i18n="nav-contact">Contact</a></li>
   </ul>
+  <button class="lang-switch" aria-label="Change language" type="button">
+    <span data-lang="en">EN</span>
+    <span class="lang-sep">·</span>
+    <span data-lang="fr">FR</span>
+  </button>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bar"></div>
   <div class="hero-content">
-    <div class="hero-eyebrow">Brazzaville, Republic of Congo</div>
+    <div class="hero-eyebrow" data-i18n="hero-eyebrow">Brazzaville, Republic of Congo</div>
     <h1 class="hero-name">Samantha<br><span>KIWA</span></h1>
-    <p class="hero-title">Software Developer · Big Data & Data Engineering</p>
-    <p class="hero-tagline">"Raw data to real decisions."</p>
-    <p class="hero-sub">From source to impact.</p>
+    <p class="hero-title" data-i18n="hero-title">Software Developer · Big Data & Data Engineering</p>
+    <p class="hero-tagline" data-i18n="hero-tagline">"Raw data to real decisions."</p>
+    <p class="hero-sub" data-i18n="hero-sub">From source to impact.</p>
     <div class="hero-cta">
-      <a href="#about" class="btn-primary">Discover my work</a>
-      <a href="#contact" class="btn-ghost">Get in touch</a>
+      <a href="#about" class="btn-primary" data-i18n="cta-discover">Discover my work</a>
+      <a href="#contact" class="btn-ghost" data-i18n="cta-contact">Get in touch</a>
     </div>
   </div>
 </section>
@@ -38,16 +43,16 @@
 <!-- ABOUT -->
 <section id="about">
   <div class="section-wrap">
-    <div class="section-label">About me</div>
-    <h2 class="section-title">Building systems<br>that matter.</h2>
+    <div class="section-label" data-i18n="about-label">About me</div>
+    <h2 class="section-title" data-i18n="about-title">Building systems<br>that matter.</h2>
     <div class="about-top fade-in">
       <div class="about-left">
         <div class="about-text">
-          <p>I'm a <strong>Software Developer</strong> with a strong data sensibility, based in the  Republic of Congo. With 2 years of experience building high-stakes information systems, I've worked across fintech and national public health.</p>
-          <p>At <strong>NexCom</strong>, I developed full-stack CMMS and business dashboards end-to-end. At the <strong>Ministry of Health</strong>, I contributed to national health information systems deployed at national scale across Congo, systems where reliable data directly affects decisions that impact real lives.</p>
-          <p>That is what drives me. I don't just build features, I think in data before I think in code, because I've seen firsthand what broken data flows cost organizations and the people who depend on them.</p>
-          <p>I chose <strong>Data Engineering</strong> because it is the foundation of everything that follows, analysis, intelligence, impact. I am particularly interested in how strong data infrastructure can unlock better systems in Africa, especially in healthcare, women empowerment and development.</p>
-          <p>I am currently completing my <strong>Data Engineering training at ALX Africa</strong>, building intentionally toward that trajectory, one system at a time.</p>
+          <p data-i18n="about-p1">I'm a <strong>Software Developer</strong> with a strong data sensibility, based in the  Republic of Congo. With 2 years of experience building high-stakes information systems, I've worked across fintech and national public health.</p>
+          <p data-i18n="about-p2">At <strong>NexCom</strong>, I developed full-stack CMMS and business dashboards end-to-end. At the <strong>Ministry of Health</strong>, I contributed to national health information systems deployed at national scale across Congo, systems where reliable data directly affects decisions that impact real lives.</p>
+          <p data-i18n="about-p3">That is what drives me. I don't just build features, I think in data before I think in code, because I've seen firsthand what broken data flows cost organizations and the people who depend on them.</p>
+          <p data-i18n="about-p4">I chose <strong>Data Engineering</strong> because it is the foundation of everything that follows, analysis, intelligence, impact. I am particularly interested in how strong data infrastructure can unlock better systems in Africa, especially in healthcare, women empowerment and development.</p>
+          <p data-i18n="about-p5">I am currently completing my <strong>Data Engineering training at ALX Africa</strong>, building intentionally toward that trajectory, one system at a time.</p>
         </div>
       </div>
       <div class="about-photo">
@@ -57,18 +62,18 @@
     <div class="about-stats fade-in">
       <div class="stat-card">
         <div class="stat-number">2</div>
-        <div class="stat-label">Years of experience</div>
-        <div class="stat-desc">Fintech & national public health systems</div>
+        <div class="stat-label" data-i18n="stat1-label">Years of experience</div>
+        <div class="stat-desc" data-i18n="stat1-desc">Fintech & national public health systems</div>
       </div>
       <div class="stat-card">
         <div class="stat-number">3</div>
-        <div class="stat-label">National health systems</div>
-        <div class="stat-desc">Deployed at national scale</div>
+        <div class="stat-label" data-i18n="stat2-label">National health systems</div>
+        <div class="stat-desc" data-i18n="stat2-desc">Deployed at national scale</div>
       </div>
       <div class="stat-card">
         <div class="stat-number">✦</div>
-        <div class="stat-label">Unshakeable</div>
-        <div class="stat-desc">I do hard things.</div>
+        <div class="stat-label" data-i18n="stat3-label">Unshakeable</div>
+        <div class="stat-desc" data-i18n="stat3-desc">I do hard things.</div>
       </div>
     </div>
   </div>
@@ -78,26 +83,34 @@
 <!-- PORTFOLIO -->
 <section id="portfolio">
   <div class="section-wrap">
-    <div class="section-label">Portfolio</div>
-    <h2 class="section-title">Work that<br>speaks for itself.</h2>
+    <div class="section-label" data-i18n="portfolio-label">Portfolio</div>
+    <h2 class="section-title" data-i18n="portfolio-title">Work that<br>speaks for itself.</h2>
     <div class="portfolio-grid">
       <a href="https://github.com/reille-B/analyse_scolarisation" target="_blank" class="portfolio-card">
-        <div class="pc-tag">Data Analysis</div>
-        <h3 class="pc-title">Girls' School Enrollment<br>in Central Africa</h3>
-        <p class="pc-desc">Analysis of girls' enrollment patterns across Central Africa. Data sourced from UNESCO, World Bank, and INS Congo.</p>
+        <div class="pc-tag" data-i18n="pc1-tag">Data Analysis</div>
+        <h3 class="pc-title" data-i18n="pc1-title">Girls' School Enrollment<br>in Central Africa</h3>
+        <p class="pc-desc" data-i18n="pc1-desc">Analysis of girls' enrollment patterns across Central Africa. Data sourced from UNESCO, World Bank, and INS Congo.</p>
         <div class="pc-stack">
           <span>Python</span>
           <span>Jupyter</span>
-          <span>UNESCO data</span>
+          <span data-i18n="pc1-stack3">UNESCO data</span>
         </div>
-        <div class="pc-link">View on GitHub →</div>
+        <div class="pc-link" data-i18n="pc1-link">View on GitHub →</div>
+      </a>
+      <a href="kyc.html" class="portfolio-card">
+        <div class="pc-tag" data-i18n="pc2-tag">Full Stack · Fintech</div>
+        <h3 class="pc-title" data-i18n="pc2-title">KYC Manager<br>for mPOS Agents</h3>
+        <p class="pc-desc" data-i18n="pc2-desc">Offline-first PWA digitizing KYC onboarding for mPOS field agents. End-to-end workflow with role-based validation, GPS capture, and auto-generated official PDFs.</p>
+        <div class="pc-stack">
+          <span>Nuxt 4</span>
+          <span>Supabase</span>
+          <span>PWA</span>
+          <span>Leaflet</span>
+        </div>
+        <div class="pc-link" data-i18n="pc2-link">Read the case study →</div>
       </a>
       <div class="portfolio-placeholder">
-        <div class="pp-tag">Full Stack</div>
-        <div class="pp-title">Project 02</div>
-      </div>
-      <div class="portfolio-placeholder">
-        <div class="pp-tag">Data Analysis</div>
+        <div class="pp-tag" data-i18n="pp-tag-data">Data Analysis</div>
         <div class="pp-title">Project 03</div>
       </div>
     </div>
@@ -107,11 +120,11 @@
 <!-- CONTACT -->
 <section id="contact">
   <div class="section-wrap">
-    <div class="section-label">Contact</div>
-    <h2 class="section-title">Let's build<br>something real.</h2>
+    <div class="section-label" data-i18n="contact-label">Contact</div>
+    <h2 class="section-title" data-i18n="contact-title">Let's build<br>something real.</h2>
     <div class="contact-grid fade-in">
       <div>
-        <p class="contact-intro">I'm open to Data Engineering roles, collaborations, and conversations about building data infrastructure.</p>
+        <p class="contact-intro" data-i18n="contact-intro">I'm open to Data Engineering roles, collaborations, and conversations about building data infrastructure.</p>
         <div class="contact-links">
           <a href="mailto:samantha.bokatola.kiwa@gmail.com" class="contact-link">
             <span class="contact-link-icon">✉</span>
@@ -128,8 +141,8 @@
         </div>
       </div>
       <div class="contact-right">
-        <div class="motto">From source<br>to impact.</div>
-        <div class="motto-sub">Unshakeable · 2026</div>
+        <div class="motto" data-i18n="motto">From source<br>to impact.</div>
+        <div class="motto-sub" data-i18n="motto-sub">Unshakeable · 2026</div>
       </div>
     </div>
   </div>
@@ -139,11 +152,129 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-name">BOKATOLA KIWA Mireille Samantha</div>
-    <div class="footer-copy">Raw data to real decisions. · Brazzaville, Congo · 2026</div>
+    <div class="footer-copy" data-i18n="footer-copy">Raw data to real decisions. · Brazzaville, Congo · 2026</div>
   </div>
 </footer>
 
 <script>
+  const translations = {
+    en: {
+      __title: "Samantha KIWA Software Developer · Big Data & Data Engineering",
+      "nav-about": "About",
+      "nav-portfolio": "Portfolio",
+      "nav-contact": "Contact",
+      "hero-eyebrow": "Brazzaville, Republic of Congo",
+      "hero-title": "Software Developer · Big Data & Data Engineering",
+      "hero-tagline": "\"Raw data to real decisions.\"",
+      "hero-sub": "From source to impact.",
+      "cta-discover": "Discover my work",
+      "cta-contact": "Get in touch",
+      "about-label": "About me",
+      "about-title": "Building systems<br>that matter.",
+      "about-p1": "I'm a <strong>Software Developer</strong> with a strong data sensibility, based in the Republic of Congo. With 2 years of experience building high-stakes information systems, I've worked across fintech and national public health.",
+      "about-p2": "At <strong>NexCom</strong>, I developed full-stack CMMS and business dashboards end-to-end. At the <strong>Ministry of Health</strong>, I contributed to national health information systems deployed at national scale across Congo, systems where reliable data directly affects decisions that impact real lives.",
+      "about-p3": "That is what drives me. I don't just build features, I think in data before I think in code, because I've seen firsthand what broken data flows cost organizations and the people who depend on them.",
+      "about-p4": "I chose <strong>Data Engineering</strong> because it is the foundation of everything that follows, analysis, intelligence, impact. I am particularly interested in how strong data infrastructure can unlock better systems in Africa, especially in healthcare, women empowerment and development.",
+      "about-p5": "I am currently completing my <strong>Data Engineering training at ALX Africa</strong>, building intentionally toward that trajectory, one system at a time.",
+      "stat1-label": "Years of experience",
+      "stat1-desc": "Fintech & national public health systems",
+      "stat2-label": "National health systems",
+      "stat2-desc": "Deployed at national scale",
+      "stat3-label": "Unshakeable",
+      "stat3-desc": "I do hard things.",
+      "portfolio-label": "Portfolio",
+      "portfolio-title": "Work that<br>speaks for itself.",
+      "pc1-tag": "Data Analysis",
+      "pc1-title": "Girls' School Enrollment<br>in Central Africa",
+      "pc1-desc": "Analysis of girls' enrollment patterns across Central Africa. Data sourced from UNESCO, World Bank, and INS Congo.",
+      "pc1-stack3": "UNESCO data",
+      "pc1-link": "View on GitHub →",
+      "pc2-tag": "Full Stack · Fintech",
+      "pc2-title": "KYC Manager<br>for mPOS Agents",
+      "pc2-desc": "Offline-first PWA digitizing KYC onboarding for mPOS field agents. End-to-end workflow with role-based validation, GPS capture, and auto-generated official PDFs.",
+      "pc2-link": "Read the case study →",
+      "pp-tag-fullstack": "Full Stack",
+      "pp-tag-data": "Data Analysis",
+      "contact-label": "Contact",
+      "contact-title": "Let's build<br>something real.",
+      "contact-intro": "I'm open to Data Engineering roles, collaborations, and conversations about building data infrastructure.",
+      "motto": "From source<br>to impact.",
+      "motto-sub": "Unshakeable · 2026",
+      "footer-copy": "Raw data to real decisions. · Brazzaville, Congo · 2026"
+    },
+    fr: {
+      __title: "Samantha KIWA Développeuse logiciel · Big Data & Data Engineering",
+      "nav-about": "À propos",
+      "nav-portfolio": "Portfolio",
+      "nav-contact": "Contact",
+      "hero-eyebrow": "Brazzaville, République du Congo",
+      "hero-title": "Développeuse logiciel · Big Data & Data Engineering",
+      "hero-tagline": "« De la donnée brute aux décisions réelles. »",
+      "hero-sub": "De la source à l'impact.",
+      "cta-discover": "Découvrir mon travail",
+      "cta-contact": "Me contacter",
+      "about-label": "À propos",
+      "about-title": "Construire des systèmes<br>qui comptent.",
+      "about-p1": "Je suis <strong>Développeuse logiciel</strong> avec une forte sensibilité data, basée en République du Congo. Forte de 2 ans d'expérience dans la construction de systèmes d'information à enjeux élevés, j'ai travaillé dans la fintech et la santé publique nationale.",
+      "about-p2": "Chez <strong>NexCom</strong>, j'ai développé des CMMS full-stack et des tableaux de bord métier de bout en bout. Au <strong>Ministère de la Santé</strong>, j'ai contribué à des systèmes nationaux d'information sanitaire déployés à l'échelle nationale au Congo, des systèmes où la fiabilité des données influence directement des décisions qui touchent à des vies humaines.",
+      "about-p3": "C'est ce qui me porte. Je ne construis pas seulement des fonctionnalités : je pense en données avant de penser en code, parce que j'ai vu de mes yeux ce que coûtent des flux de données défaillants aux organisations et aux personnes qui en dépendent.",
+      "about-p4": "J'ai choisi le <strong>Data Engineering</strong> parce que c'est le socle de tout ce qui suit : analyse, intelligence, impact. Je m'intéresse particulièrement à la façon dont une infrastructure de données solide peut débloquer de meilleurs systèmes en Afrique, notamment dans la santé, l'autonomisation des femmes et le développement.",
+      "about-p5": "Je termine actuellement ma <strong>formation Data Engineering à ALX Africa</strong>, construisant pas à pas vers cette trajectoire, un système à la fois.",
+      "stat1-label": "Années d'expérience",
+      "stat1-desc": "Fintech & santé publique nationale",
+      "stat2-label": "Systèmes nationaux de santé",
+      "stat2-desc": "Déployés à l'échelle nationale",
+      "stat3-label": "Inébranlable",
+      "stat3-desc": "Je fais les choses difficiles.",
+      "portfolio-label": "Portfolio",
+      "portfolio-title": "Un travail qui<br>parle de lui-même.",
+      "pc1-tag": "Analyse de données",
+      "pc1-title": "Scolarisation des filles<br>en Afrique centrale",
+      "pc1-desc": "Analyse des dynamiques de scolarisation des filles à travers l'Afrique centrale. Données issues de l'UNESCO, de la Banque mondiale et de l'INS Congo.",
+      "pc1-stack3": "Données UNESCO",
+      "pc1-link": "Voir sur GitHub →",
+      "pc2-tag": "Full Stack · Fintech",
+      "pc2-title": "KYC Manager<br>pour agents mPOS",
+      "pc2-desc": "PWA offline-first qui numérise l'onboarding KYC des agents mPOS sur le terrain. Workflow complet avec validation par rôles, GPS et génération automatique des PDF officiels.",
+      "pc2-link": "Lire l'étude de cas →",
+      "pp-tag-fullstack": "Full Stack",
+      "pp-tag-data": "Analyse de données",
+      "contact-label": "Contact",
+      "contact-title": "Construisons<br>quelque chose de vrai.",
+      "contact-intro": "Je suis ouverte aux postes en Data Engineering, aux collaborations et aux échanges sur la construction d'infrastructures data.",
+      "motto": "De la source<br>à l'impact.",
+      "motto-sub": "Inébranlable · 2026",
+      "footer-copy": "De la donnée brute aux décisions réelles. · Brazzaville, Congo · 2026"
+    }
+  };
+
+  function detectInitialLang() {
+    const saved = localStorage.getItem('lang');
+    if (saved === 'en' || saved === 'fr') return saved;
+    return (navigator.language || '').toLowerCase().startsWith('fr') ? 'fr' : 'en';
+  }
+
+  function applyLang(lang) {
+    const dict = translations[lang];
+    document.documentElement.lang = lang;
+    document.title = dict.__title;
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.dataset.i18n;
+      if (dict[key] != null) el.innerHTML = dict[key];
+    });
+    document.querySelectorAll('.lang-switch [data-lang]').forEach(el => {
+      el.classList.toggle('active', el.dataset.lang === lang);
+    });
+    localStorage.setItem('lang', lang);
+  }
+
+  applyLang(detectInitialLang());
+
+  document.querySelector('.lang-switch').addEventListener('click', () => {
+    const current = document.documentElement.lang;
+    applyLang(current === 'fr' ? 'en' : 'fr');
+  });
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
